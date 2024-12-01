@@ -1,0 +1,17 @@
+Key Features:
+Dogs Array:
+
+Added a dogs array containing objects for each dog with name, breed, and age.
+Display Dogs:
+
+A new button Display Dogs triggers the displayDogs() function.
+Iterates through the dogs array to display each dog's details.
+Interactive Buttons:
+
+Buttons for displaying person object, fruits array, using join, applying pop, and displaying the dogs array.
+How It Works:
+Display Object: Shows the details of the person object.
+Display Fruits: Iterates through the fruits array and displays each fruit with its index.
+Use Join: Displays the fruits as a single comma-separated string.
+Use Pop: Removes the last fruit from the array and displays the updated list.
+Display Dogs: Iterates through the dogs array and shows the name, breed, and age of each dog.

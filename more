@@ -1,0 +1,56 @@
+HTML Structure
+<!DOCTYPE html>: Declares the document as an HTML5 document.
+<html>: Root element of the HTML document.
+<head>: Contains metadata, the title, and CSS styling.
+CSS Styling: Styles for the body, .output div, and buttons ensure a clean and consistent layout.
+<body>: Main content area where interactive elements and output are displayed.
+Main Components
+Title and Header
+
+<title>: Sets the title of the webpage (displayed in the browser tab).
+<h1>: A header indicating the topic ("Object and Array").
+Output Area
+
+<div>: Displays results of JavaScript functions.
+ID: "output" is used to reference the div in JavaScript for dynamic updates.
+Buttons
+
+Each button is associated with a specific JavaScript function using the onclick attribute.
+JavaScript Functionality
+Objects and Arrays
+
+Object: person
+Properties: name, age, occupation, skills (an array), and address (a nested object with city and zip).
+Arrays
+fruits: An array of fruit names.
+dogs: An array of objects, each representing a dog with name, breed, and age.
+Functions
+
+displayObject
+
+Formats the person object as a string and updates the output div.
+Uses string interpolation (${}) to dynamically insert values.
+Demonstrates nested properties (person.address.city) and array methods (person.skills.join(', ')).
+displayArray
+
+Loops through the fruits array using forEach and displays each fruit with its index.
+Appends each fruit to the output string.
+useJoin
+
+Displays the fruits array as a comma-separated string using join(', ').
+usePop
+
+Removes the last element from fruits using pop.
+Displays the removed element and the updated array.
+displayDogs
+
+Iterates through the dogs array and displays each dog's details.
+Uses a zero-based index but formats it for display (index + 1).
+Interactivity
+When a user clicks a button, the corresponding function runs, and the output div (id="output") updates with the relevant data.
+This dynamic update is achieved using document.getElementById('output').innerHTML.
+Purpose
+The webpage serves as:
+
+An educational tool to demonstrate JavaScript objects and arrays.
+A simple interactive example for learning how to manipulate and display data dynamically.

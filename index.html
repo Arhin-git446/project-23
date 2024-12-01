@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object and Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        button {
+            margin: 5px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object and Array</h1>
+    <div class="output" id="output">Output will be displayed here</div>
+    <button onclick="displayObject()">Display Person Object</button>
+    <button onclick="displayArray()">Display Fruits Array</button>
+    <button onclick="useJoin()">Display Fruits with Join</button>
+    <button onclick="usePop()">Remove Last Fruit (Pop)</button>
+    <button onclick="displayDogs()">Display Dogs</button>
+
+    <script>
+        // Step 1: Create an object
+        let person = {
+            name: 'John',
+            age: 30,
+            occupation: 'Developer',
+            skills: ['JavaScript', 'Python', 'C++'],
+            address: {
+                city: 'New York',
+                zip: 10001
+            }
+        };
+
+        // Step 2: Create arrays
+        let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+        let dogs = [
+            { name: 'Buddy', breed: 'Golden Retriever', age: 3 },
+            { name: 'Charlie', breed: 'Beagle', age: 5 },
+            { name: 'Max', breed: 'Labrador', age: 2 }
+        ];
+
+        // Function to display object values
+        function displayObject() {
+            let output = `
+                <strong>Person Object:</strong><br>
+                Name: ${person.name}<br>
+                Age: ${person.age}<br>
+                Occupation: ${person.occupation}<br>
+                Skills: ${person.skills.join(', ')}<br>
+                Address: ${person.address.city}, ZIP: ${person.address.zip}
+            `;
+            document.getElementById('output').innerHTML = output;
+        }
+
+        // Function to display array values by index
+        function displayArray() {
+            let output = '<strong>Fruits Array:</strong><br>';
+            fruits.forEach((fruit, index) => {
+                output += `Index ${index}: ${fruit}<br>`;
+            });
+            document.getElementById('output').innerHTML = output;
+        }
+
+        // Function to display the whole array using join
+        function useJoin() {
+            let output = `
+                <strong>Fruits Array with Join:</strong><br>
+                ${fruits.join(', ')}
+            `;
+            document.getElementById('output').innerHTML = output;
+        }
+
+        // Function to use pop and display updated array
+        function usePop() {
+            let removed = fruits.pop(); // Remove the last element
+            let output = `
+                <strong>After Pop:</strong><br>                                             
+                Removed Fruit: ${removed}<br>
+                Updated Array: ${fruits.join(', ')}
+            `;
+            document.getElementById('output').innerHTML = output;
+        }
+
+        // Function to display dogs array
+        function displayDogs() {
+            let output = '<strong>Dogs:</strong><br>';
+            dogs.forEach((dog, index) => {
+                output += `Dog ${index + 1}: ${dog.name}, Breed: ${dog.breed}, Age: ${dog.age} years<br>`;
+            });
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+</html>
